@@ -6,6 +6,14 @@ public class Witcher {
 	private int vidas;
 	private boolean hasSoul;
 	
+	private String getName() {
+		return name;
+	}
+
+	private void setName(String name) {
+		this.name = name;
+	}
+	
 	public int getVidas() {
 		return vidas;
 	}
@@ -22,18 +30,32 @@ public class Witcher {
 		this.hasSoul = hasSoul;
 	}
 	
+	
+	public boolean isDead() {
+		if(vidas == 0) {
+			return true;
+		} else if(!hasSoul) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	
 	public static void main(String[] args) {
 		
+		Witcher brujo = new Witcher();
 		
+		brujo.setName("Gerarlt de Rivia");
+		brujo.setVidas(15);
+		brujo.setHasSoul(true);
+		
+		if(brujo.isDead()) {
+			System.out.println(brujo.getName() + " esta muerto");
+		} else {
+			System.out.println(brujo.getName() + " esta vivo");
+		}
 
-	}
-
-	private String getName() {
-		return name;
-	}
-
-	private void setName(String name) {
-		this.name = name;
 	}
 
 }
