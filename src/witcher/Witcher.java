@@ -25,7 +25,7 @@ public class Witcher {
 	public boolean isHasSoul() {
 		return hasSoul;
 	}
-
+	
 	public void setHasSoul(boolean hasSoul) {
 		this.hasSoul = hasSoul;
 	}
@@ -39,6 +39,10 @@ public class Witcher {
 		} else {
 			return false;
 		}
+	}
+	public void reciveDamage(int damage){
+		vidas -=damage;
+		if(vidas < 0) vidas = 0;
 	}
 
 }
