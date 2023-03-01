@@ -9,7 +9,7 @@ public class Main {
 		brujo.setName("Gerarlt de Rivia");
 		brujo.setVidas(15);
 		brujo.setHasSoul(true);
-		brujo.setDaño(5);
+		brujo.setDano(5);
 		
 		if(brujo.isDead()) {
 			System.out.println(brujo.getName() + " esta muerto");
